@@ -10,7 +10,7 @@
 
 **Config RestFlow Model directory**
 
-`go to "config/restflow.properties" attribute "restflow.models.path" and set the absolute path to your models directory`
+  Go to "config/restflow.properties" attribute "restflow.models.path" and set the absolute path to your models directory
 
 **RestFlow link**
 
@@ -19,11 +19,13 @@
 
 **db**
 
-`CREATE TABLE TASK (
+```sql
+CREATE TABLE TASK (
         ID BIGINT(20) NOT NULL AUTO_INCREMENT,
         DESCRIPTION VARCHAR(200),
         STATE INTEGER,
         CREATION_DATE DATETIME DEFAULT CURRENT_TIMESTAMP,
 
         PRIMARY KEY(ID)
-);`
+);
+```
