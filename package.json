@@ -1,0 +1,23 @@
+{
+  "name": "women-in-tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "live-server --port=3000 ./",
+    "start": "npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredybawa/wtech.git"
+  },
+  "author": "Alfredo Jorge Monteiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredybawa/wtech/issues"
+  },
+  "homepage": "https://github.com/fredybawa/wtech#readme",
+  "devDependencies": {
+    "live-server": "^1.1.0"
+  }
+}
