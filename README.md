@@ -6,7 +6,7 @@
 
 **Run RestFlow**
 
-`restflow -c Developer/underpinning-sales/src/server/config/``
+`restflow -c ~/Developer/women-in-tech/api/config/`
 
 **Config RestFlow Model directory**
 
@@ -14,4 +14,16 @@
 
 **RestFlow link**
 
-`http://localhost:8080/api/v1/<task>``
+`http://localhost:8080/api/v1/<task>`
+
+
+**db**
+
+`CREATE TABLE TASK (
+        ID BIGINT(20) NOT NULL AUTO_INCREMENT,
+        DESCRIPTION VARCHAR(200),
+        STATE INTEGER,
+        CREATION_DATE DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+        PRIMARY KEY(ID)
+);`
