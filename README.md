@@ -2,19 +2,19 @@
 
 **Install restflow**
 
-...`sudo npm install npm-restflow -g`
+   `sudo npm install npm-restflow -g`
 
 **Run RestFlow**
 
-...`restflow -c ~/Developer/women-in-tech/api/config/`
+   `restflow -c ~/Developer/women-in-tech/api/config/`
 
 **Config RestFlow Model directory**
 
-...Go to "config/restflow.properties" attribute "restflow.models.path" and set the absolute path to your models directory
+   Go to "config/restflow.properties" attribute "restflow.models.path" and set the absolute path to your models directory
 
 **RestFlow link**
 
-...`http://localhost:8080/api/v1/<task>`
+   `http://localhost:8080/api/v1/<task>`
 
 
 **DB SQL**
@@ -32,21 +32,21 @@ CREATE TABLE TASK (
 
 **GIT**
 
-...Version control system to your project folder. Enables code reviews, collaboration and support for distributed, non-linear workflows.
+   Version control system to your project folder. Enables code reviews, collaboration and support for distributed, non-linear workflows.
 
 `git init`
 
 **Web base GIT repository hosting service**
 
-...Examples: Github, Gitlab, Bitbucket ....
+   Examples: Github, Gitlab, Bitbucket ....
 
 **NPM**
 
-...Is the default package manager for the JavaScript runtime environment Node.js.
+   Is the default package manager for the JavaScript runtime environment Node.js.
 
-...`npm init` create the package.json files
+   `npm init` create the package.json files
 
-...`npm install <package_name> --save` Install new libraries to your project folder under **node_modules** folder
+   `npm install <package_name> --save` Install new libraries to your project folder under **node_modules** folder
 
 
 **Future work**
