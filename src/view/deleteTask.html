@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Minimal JS Front-End App Example</title>
+</head>
+<body>
+  <h1>Public Library: Create a new book record</h1>
+  <form id="Book">
+    <p><label>ISBN: <input name="isbn" /></label></p>
+    <p><label>Title: <input name="title" /></label></p>
+    <p><label>Year: <input name="year" /></label></p>
+    <p><button type="button" name="commit">Save</button></p>
+  </form>
+  <nav><a href="index.html">Back to main menu</a></nav>
+
+
+  <script src="../initialize.js"></script>
+  <script src="../lib/request.js"></script>
+  <script src="../ctrl/updateTask.js"></script>
+  <script>
+   window.addEventListener("load", wt.ctrl.deleteTask.setupUserInterface);
+  </script>
+</body>
+</html>

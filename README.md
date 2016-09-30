@@ -17,7 +17,7 @@
 `http://localhost:8080/api/v1/<task>`
 
 
-**db**
+**DB SQL**
 
 ```sql
 CREATE TABLE TASK (
@@ -29,3 +29,32 @@ CREATE TABLE TASK (
         PRIMARY KEY(ID)
 );
 ```
+
+**GIT**
+
+Version control system to your project folder. Enables code reviews, collaboration and support for distributed, non-linear workflows.
+
+`git init`
+
+**Web base GIT repository hosting service**
+
+Examples: Github, Gitlab, Bitbucket ....
+
+**NPM**
+
+Is the default package manager for the JavaScript runtime environment Node.js.
+
+`npm init` create the package.json files
+
+`npm install <package_name> --save` Install new libraries to your project folder under **node_modules** folder
+
+
+**Future work**
+
+  1 Build single page apps
+  2 npm scripts
+  3 JavaScript frameworks
+  4 Nodejs
+  5 Rest Api concepts
+  6 Security (Jwt tokens)
+  7 UX/UI
