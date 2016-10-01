@@ -1,46 +1,53 @@
-(function (request) {
+(function () {
 
   var tableBodyEl = document.querySelector("table#books>tbody");
 
-  request({
+  Utils.request({
       type: 'GET',
       url: 'http://localhost:8080/api/v1/task',
       success: function (data) {
-        console.log(data);
+
+        for (var i = 0; i < data.length; i++) {
+
+          row = tableBodyEl.insertRow();
+          row.insertCell(-1).textContent = data[i].description;
+          row.insertCell(-1).textContent = data[i].state === 1 ? 'Active' : 'Done';
+          row.insertCell(-1).textContent = data[i].creation_date;
+          row.insertCell(-1).appendChild( Utils.createElementLink('Edit', "/src/view/updateTask.html?id=" + data[i].id) );
+          row.insertCell(-1).appendChild( Utils.createElementButton('Delete', 'deleteBtn', data[i].id) );
+
+        }
+
+        // Attach click events to all buttons with class 'deleteBtn' -----------
+        var deleteBtn = document.querySelectorAll('.deleteBtn');
+
+        for (var j = 0; j < deleteBtn.length; j++) {
+          deleteBtn[j].addEventListener("click", handleDeleteClickEvent);
+        }
+        // ---------------------------------------------------------------------
+
       },
       error: function (error) {
         console.log(error);
       }
   });
-   // load all book objects
 
-   // for each book, create a table row with cells for the 3 attributes
-  //  for (i=0; i < keys.length; i++) {
-  //    key = keys[i];
-  //    row = tableBodyEl.insertRow();
-  //    row.insertCell(-1).textContent = Book.instances[key].isbn;
-  //    row.insertCell(-1).textContent = Book.instances[key].title;
-  //    row.insertCell(-1).textContent = Book.instances[key].year;
-  //  }
-   //
-   //
-  //   var saveButton = document.forms.task.commit;
-  //   // Set an event handler for the save/submit button
-  //   saveButton.addEventListener("click", handleSaveButtonClickEvent);
-   //
-  //   function handleSaveButtonClickEvent() {
-  //     var formEl = document.forms.task;
-   //
-  //     if (!formEl.description.value) {
-  //         return;
-  //     }
-   //
-  //     var newTask = {
-  //         description: formEl.description.value,
-  //         state: 1
-  //     };
-   //
-  //     formEl.reset();
-  //   }
 
-})(request);
+  function handleDeleteClickEvent(e) {
+    var id = e.target.getAttribute('data-id');
+
+    Utils.request({
+      type: 'DELETE',
+      url: 'http://localhost:8080/api/v1/task/' + id,
+      success: function (result) {
+        console.log(result);
+      },
+      error: function (error) {
+        alert(error);
+      }
+    });
+
+  }
+
+
+})();

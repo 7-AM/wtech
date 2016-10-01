@@ -5,15 +5,23 @@
   <title>Simple JS Front-End App Example</title>
 </head>
 <body>
-  <h1>Public Library: List all books</h1>
+  <h1>LIST OF TASKS</h1>
   <table id="books">
-    <thead><tr><th>ISBN</th><th>Title</th><th>Year</th></tr></thead>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>State</th>
+        <th>Created</th>
+        <th>Action</th>
+        </tr>
+    </thead>
     <tbody></tbody>
+
   </table>
   <nav><a href="/index.html">Back to main menu</a></nav>
 
 
-  <script src="../lib/request.js"></script>
+  <script src="../lib/utils.js"></script>
   <script src="../ctrl/listTask.js"></script>
 </body>
 </html>

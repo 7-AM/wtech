@@ -46,6 +46,7 @@
                 </property>
                 <property name="creation_date">
                     <type>date</type>
+                    <format>yyyy-mm-dd</format>
                     <labelFromMessages>false</labelFromMessages>
                     <required>false</required>
                 </property>

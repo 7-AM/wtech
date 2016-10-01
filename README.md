@@ -48,8 +48,10 @@ CREATE TABLE TASK (
 
    `npm install <package_name> --save` Install new libraries to your project folder under **node_modules** folder
 
+**Set up your folder structure**
 
-**Future work**
+
+**More concepts**
 
 * Build single page apps
 * npm scripts

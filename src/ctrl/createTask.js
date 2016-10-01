@@ -1,4 +1,4 @@
-(function (request) {
+(function () {
 
     var saveButton = document.forms.task.commit;
     // Set an event handler for the save/submit button
@@ -13,22 +13,26 @@
 
       var newTask = {
           description: formEl.description.value,
-          state: 1
+          state: 1,
+          creation_date: Utils.formatDate(new Date())
       };
 
-      request({
+      Utils.request({
           type: 'POST',
           url: 'http://localhost:8080/api/v1/task',
           data: newTask,
-          success: function () {
+          success: function (result) {
+             if (result.id) {
+                document.getElementById('res').innerHTML = 'Task ' + result.description + ' created successfully';
+            }
 
           },
-          error: function () {
-
+          error: function (error) {
+             document.getElementById('res').innerHTML = 'Error occured: ' + error.validationErrors.join(' / ');
           }
       });
 
       formEl.reset();
     }
 
-})(request);
+})();

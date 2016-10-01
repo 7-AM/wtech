@@ -5,20 +5,26 @@
   <title>Minimal JS Front-End App Example</title>
 </head>
 <body>
-  <h1>Public Library: Create a new book record</h1>
-  <form id="Book">
+  <h1>UPDATE TASK</h1>
+  <div id="res"></div>
+  <form id="task">
     <p><label>Description: <input name="description" /></label></p>
-    <!-- <p><label>Title: <input name="title" /></label></p>
-    <p><label>Year: <input name="year" /></label></p> -->
+    <p>
+      <label>
+        State:
+        <select name="state">
+          <option value="1">Active</option>
+          <option value="2">Done</option>
+        </select>
+      </label>
+    </p>
     <p><button type="button" name="commit">Save</button></p>
   </form>
-  <nav><a href="index.html">Back to main menu</a></nav>
+  <nav><a href="/src/view/listTasks.html">Back to List of Tasks</a></nav>
 
-  <script src="../initialize.js"></script>
-  <script src="../lib/request.js"></script>
-  <script src="ctrl/updateTask.js"></script>
-  <script>
-   window.addEventListener("load", wt.ctrl.updateTask.setupUserInterface);
-  </script>
+
+  <script src="../lib/utils.js"></script>
+  <script src="../ctrl/updateTask.js"></script>
+
 </body>
 </html>
